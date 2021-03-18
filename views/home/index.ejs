@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
- <meta charset="utf-8">
- <title>Cadastro de Eventos e Convidados - Login</title>
- <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
- <header>
- <h1>Login</h1>
- <h4>Entre com suas credenciais</h4>
- </header>
- <section>
- <form action="/login" method="post">
- Nome: <br/>
- <input type="text" name="usuario[nome]" />
- <br> Senha: <br/>
- <input type="password" name="usuario[senha]" />
- <br>
- <button type="submit">Login</button>
- </form>
- </section>
- <footer>
- <small>Sistema de Cadastro de Eventos e Convidados</small>
- </footer>
-</body>
+   <head>
+      <meta charset="utf-8">
+      <title>Cadastro de Eventos e Convidados - Login</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   </head>
+   <body>
+        <div class="container d-flex h-100">
+            <div class="row justify-content-center c-principal align-self-center jumbotron w-100">
+                <div class="container">
+                    <div class="row justify-content-center mb-8">
+                        <h1 class="display-4">Login</h1>
+                    </div>
+                    <div class="row justify-content-center mb-8">
+                        <h4 class="lead">Entre com suas credenciais</h4>
+                    </div>
+                </div>
+                <section class="container">
+                    <div class="row justify-content-center">
+                        <form action="/login" method="post" class="col-7">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="usuario[nome]" placeholder="admin" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="usuario[senha]" />
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">entrar</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="row justify-content-center mb-5">
+            <small>Sistema de Cadastro de Eventos e Convidados</small>
+        </footer>
+   </body>
 </html>

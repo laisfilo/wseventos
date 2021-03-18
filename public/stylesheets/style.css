@@ -1,8 +1,26 @@
+html {
+  height: 100%;
+  width: 100%;
+
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+.btn {
+  width: 80%;
+  align-self: center;
+  display: flex !important;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.c-principal {
+  padding-bottom: 40px;
 }
