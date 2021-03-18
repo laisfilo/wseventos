@@ -33,6 +33,9 @@ load('models')
 app.use(error.notFound);
 app.use(error.serverError);
 
-app.listen(3000, function() {
-  console.log('Aplicação no ar')
-});
+var porta = process.env.PORT || 8080;
+app.listen(porta);
+
+// app.listen(3000, function() {
+//   console.log('Aplicação no ar')
+// });
