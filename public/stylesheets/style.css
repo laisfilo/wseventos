@@ -21,6 +21,29 @@ a {
   color: #00B7FF;
 }
 
+.icon-menu {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+
+.a-r {
+  text-align: end;
+}
+
+.a-c {
+  text-align: center;
+}
+
 .c-principal {
   padding-bottom: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.size-2 {
+  font-size: 1rem;
+  text-transform: uppercase;
 }

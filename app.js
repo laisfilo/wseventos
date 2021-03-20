@@ -14,7 +14,9 @@ var error = require('./middlewares/error');
 var app = express();
 
 var mongoose = require('mongoose');
-global.db = mongoose.connect('mongodb://localhost:27017/neventos', { useNewUrlParser: true });
+global.db = mongoose.connect('mongodb+srv://dbAdminLF:qIwvI8ELBfuz5AqK@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
+
+//compass string = mongodb+srv://dbAdminLF:<password>@mean.p1qy8.mongodb.net/test
 
 mongoose.connection.on('connected', function () {
  console.log('=====Conexão estabelecida com sucesso=====');
@@ -46,9 +48,9 @@ load('models')
 app.use(error.notFound);
 app.use(error.serverError);
 
-var porta = process.env.PORT || 8080;
-app.listen(porta);
+// var porta = process.env.PORT || 8080;
+// app.listen(porta);
 
-// app.listen(3000, function() {
-//   console.log('Aplicação no ar')
-// });
+app.listen(3000, function() {
+  console.log('Aplicação no ar')
+});
