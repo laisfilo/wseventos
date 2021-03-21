@@ -5,4 +5,4 @@ module.exports = function (app) {
   app.get('/logout', home.logout);
 
   app.post('/novoUsuario', home.novoUsuario);
- };
+};

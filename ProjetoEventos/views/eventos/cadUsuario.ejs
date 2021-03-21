@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de Usuários</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-6 pt-1">
+                        <p>Bem-vindo, <span class="bold size-2"><%= usuario.nome %></span></p>
+                    </div>
+                    <div class="col-1 mx-0 px-0 pt-1 align-self-end a-r">
+                        <a class="btn btn-outline-secondary btn-sm" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main class="container">
+            <div class="container p-0">
+                <div class="pt-1">
+                    <h1>Cadastro de Usuários</h1>
+                </div>
+                <div class="pt-1">
+                    <h4>Forneça os dados do usuário para seu cadastro</h4>
+                </div>
+            </div>
+            <section>
+                <form action="/novoUsuario" method="post">
+                Nome:
+                <br />
+                <input type="text" name="usuario[nome]" />
+                <br> Senha:
+                <br/>
+                <input type="password" name="usuario[senha]" />
+                <br> Confirma:
+                <br />
+                <input type="password" name="usuario[confirma]" />
+                <br>
+                <button type="submit">Login</button>
+                </form>
+            </section>
+        </main>
+        <footer class="bd-footer mt-auto p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
+            <small>Sistema de Cadastro de Eventos e Convidados</small>
+        </footer>
+    </body>
+</html>

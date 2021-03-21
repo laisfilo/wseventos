@@ -2,7 +2,7 @@
 <html class="h-100">
     <head>
         <meta charset="utf-8">
-        <title>Cadastro de Eventos e Convidados</title>
+        <title>Cadastro de Eventos</title>
         <link rel='stylesheet' href='/stylesheets/style.css' />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -29,18 +29,18 @@
                 </div>
             </div>
             <section>
-                <form action="/novoUsuario" method="post">
-                Nome:
+                <form action="/novoEvento" method="post">
+                Descrição:
                 <br />
-                <input type="text" name="usuario[nome]" />
-                <br> Senha:
-                <br/>
-                <input type="password" name="usuario[senha]" />
-                <br> Confirma:
+                <input type="text" name="evento[descricao]" >
+                <br> Data:
                 <br />
-                <input type="password" name="usuario[confirma]" />
+                <input type="date" name="evento[data]" >
+                <br> Preço:
+                <br />
+                <input type="text" name="evento[preco]" >
                 <br>
-                <button type="submit">Login</button>
+                <button type="submit">Enviar</button>
                 </form>
             </section>
         </main>

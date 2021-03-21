@@ -7,8 +7,6 @@ var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 
 
-var load = require('express-load');
-
 var error = require('./middlewares/error');
 
 var app = express();
