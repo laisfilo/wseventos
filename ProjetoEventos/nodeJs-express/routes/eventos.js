@@ -12,6 +12,9 @@ module.exports = function (app) {
 
     app.get('/listaEventosWS', valida, eventos.listaEventosWS);
 
+
+    app.get('/listaPagamentos', valida, eventos.listaPagamentos);
+
     app.post('/novoEvento', eventos.novoEvento);
 
     app.get('/pagamento/:evento/:preco', valida, eventos.pagamento);

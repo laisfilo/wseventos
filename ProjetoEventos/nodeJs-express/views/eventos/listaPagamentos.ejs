@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lista Eventos do WebService</title>
+    <title>Lista Pagamentos do WebService</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,7 +26,7 @@
         </header>
     </div>
     <div class="container">
-        <h1>Lista de Eventos</h1>
+        <h1>Lista de Pagamentos</h1>
         <h4>Selecione uma opção na lista para executá-la</h4>
     </div>
     <section class="container my-5">
@@ -34,27 +34,23 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Data</th>
+                    <th scope="col">Evento</th>
                     <th scope="col">Preço</th>
+                    <th scope="col">Status</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                <% eventos.forEach(function(evento, index) { %>
+                <% pagamentos.forEach(function(pagamento, index) { %>
                     <tr>
                         <td>
-                            <%= evento.descricao %>
+                            <%= pagamento.evento %>
                         </td>
                         <td>
-                            <%= evento.data %>
+                            <%= pagamento.preco %>
                         </td>
                         <td>
-                            R$ <%= evento.preco %>
-                        </td>
-                        <td>
-                            <a href="/pagamento/<%= evento.descricao %>/<%= evento.preco %>">
-                                comprar este evento</a>
+                            Ok
                         </td>
                     </tr>
                     <% }) %>
