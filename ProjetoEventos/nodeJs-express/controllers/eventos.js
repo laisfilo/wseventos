@@ -123,7 +123,7 @@ module.exports = function (app) {
                 res.on('data', function (data) {
                     pagamentos = JSON.parse(data);
                     var usuario = request.session.usuario,
-                        params = { usuario: usuario, pagamento: pagamentos };
+                        params = { usuario: usuario, pagamentos: pagamentos };
                     response.render('eventos/listaPagamentos', params);
                 });
             }).end();

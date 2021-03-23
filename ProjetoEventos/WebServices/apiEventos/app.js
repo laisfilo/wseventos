@@ -7,7 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var mongoose = require('mongoose');
 // global.db = mongoose.connect('mongodb://localhost:27017/neventos');
-global.db = mongoose.connect('mongodb+srv://dbAdminLF:qIwvI8ELBfuz5AqK@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
+// global.db = mongoose.connect('mongodb+srv://dbAdminLF:qIwvI8ELBfuz5AqK@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
+
+global.db = mongoose.connect('mongodb+srv://dbAdminLF:bxRiCtpFEXZuxxO1@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 load('models').into(app);
 var Evento = app.models.eventos;

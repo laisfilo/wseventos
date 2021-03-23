@@ -12,7 +12,13 @@ var error = require('./middlewares/error');
 var app = express();
 
 var mongoose = require('mongoose');
-global.db = mongoose.connect('mongodb+srv://dbAdminLF:qIwvI8ELBfuz5AqK@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
+global.db = mongoose.connect('mongodb+srv://dbAdminLF:bxRiCtpFEXZuxxO1@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
+
+// mongodb+srv://dbAdminLF:bxRiCtpFEXZuxxO1@mean.p1qy8.mongodb.net/test
+
+// mongodb+srv://dbAdminLF:<password>@mean.p1qy8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+// global.db = mongoose.connect('mongodb+srv://dbAdminLF:qIwvI8ELBfuz5AqK@mean.p1qy8.mongodb.net/dbAdminLF?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 //compass string = mongodb+srv://dbAdminLF:<password>@mean.p1qy8.mongodb.net/test
 
